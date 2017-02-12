@@ -1,8 +1,13 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
-namespace CustomExtensions
+namespace String.Extensions
 {
-    public static class StringExtensions
+    public static class Remover
     {
         public static string Remove(this string str, params string[] toRemove)
         {
@@ -31,7 +36,8 @@ namespace CustomExtensions
                 value = Regex.Replace(value, Regex.Escape(item), string.Empty, RegexOptions.IgnoreCase);
 
             return value;
-        }    
+        }
+
         
     }
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CustomExtensions;
+using String.Extensions;
 
 namespace UnitTestProject1
 {
     [TestClass]
-    public class StringExtensionsTest
+    public class RemoverTest
     {
         [TestMethod]
         public void TestLowerCase()
@@ -28,6 +28,8 @@ namespace UnitTestProject1
 
             Assert.AreEqual(expectedValue, stringTested);
         }
+
+        
 
     }
 }

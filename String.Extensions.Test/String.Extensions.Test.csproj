@@ -50,7 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="src\StringExtensionsTest.cs" />
+    <Compile Include="src\KeeperTest.cs" />
+    <Compile Include="src\RemoverTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\StringExtensions.cs" />
+    <Compile Include="src\Keeper.cs" />
+    <Compile Include="src\Remover.cs" />
+    <Compile Include="src\Replacer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="img\" />
