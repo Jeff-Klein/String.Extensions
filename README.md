@@ -1,3 +1,4 @@
+
 # String.Extensions
 <h2>These library helps you with String manipulation, avoiding repetitive syntax and regex use.</h2>
 
@@ -19,6 +20,8 @@ You can also pass a boolean value to rather ignore case or not. If you don't pas
 ![Alt text](/String.Extensions/img/overload2.png?raw=true "Second Overload")
 
 More methods will be added soon!
-</br>
+
+
 <b>Feel free to fork and help improve this library.</b>
+
 
