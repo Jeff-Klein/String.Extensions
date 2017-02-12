@@ -40,5 +40,16 @@ namespace UnitTestProject1
             Assert.AreEqual(expectedValue, stringTested);
         }
 
+        [TestMethod]
+        public void RemoveAllSpecialCharactersTest()
+        {
+            const string expectedValue = "4PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS1";
+
+            var stringTested = "4/PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS-1_()";
+            stringTested = stringTested.RemoveAllSpecialCharacters();
+
+            Assert.AreEqual(expectedValue, stringTested);
+        }
+
     }
 }

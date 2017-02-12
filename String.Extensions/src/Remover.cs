@@ -42,5 +42,10 @@ namespace String.Extensions
         {
             return Regex.Replace(value, @"[\d-]", string.Empty);
         }
+
+        public static string RemoveAllSpecialCharacters(this string value)
+        {
+            return Regex.Replace(value, "[^0-9A-Za-z]+", string.Empty);
+        }
     }
 }
