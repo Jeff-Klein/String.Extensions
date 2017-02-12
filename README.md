@@ -1,12 +1,12 @@
 
 # String.Extensions
-<h2>These library helps you with String manipulation, avoiding repetitive syntax and regex use.</h2>
+<h2>These library helps you with String manipulation, avoiding repetitive syntax and regex use. All methods extend from default String type.</h2>
 
 To download String.Extensions, using the Package Manager Console, type:
 
-Install-Package String.Extensions
+<b>Install-Package String.Extensions</b>
 
-Or using the Nuget Package Manager, search for "String.Extensions".
+Or using the Nuget Package Manager, search for <i>String.Extensions</i>.
 
 ![Alt text](/String.Extensions/img/nuget_download.png?raw=true "Nuget Package")
 
@@ -15,17 +15,15 @@ Current methods avaliable are:
 | Method  | Description | Parameters |
 | ------------- | ------------- | ------------- |
 | String.Remove(params string[] toRemove)  | This method allows you to pass multiple Strings to be removed  | <i>toRemove</i>: List of values to be removed. |
-| String.Remove(bool ignoreCase, params string[] toRemove) | Replaces multiple elements with one same element specified. Case will be considered.  | <i>ignoreCase: Ignore the case of the value to be removed. </i> <i>toRemove</i>: List of values to be removed. |
-
-String.Remove:
-
-This method allows you to pass an array of Strings to be removed.
-
-![Alt text](/String.Extensions/img/overload1.png?raw=true "First Overload")
-
-You can also pass a boolean value to rather ignore case or not. If you don't pass this parameter, case will be considered by default.
-
-![Alt text](/String.Extensions/img/overload2.png?raw=true "Second Overload")
+| String.Remove(bool ignoreCase, params string[] toRemove) | Replaces multiple elements with one same element specified. Case will be considered.  | <i>ignoreCase</i>: Ignore the case of the value to be removed. </br><i>toRemove</i>: List of values to be removed. |
+| RemoveAllNumbers() | Removes all numbers, keeping alphabetical letters and special characters. ||
+| RemoveAllSpecialCharacters() | Removes all special characters, keeping alphabetical letters and numbers. ||
+| RemoveAllAlphabeticalLetters() | Removes all alphabetical letters, keeping special characters and numbers. ||
+| Replace(string replacerString, params string[] toReplace)| Replaces multiple elements with one same element specified. Case will be considered. | <i>replacerString</i>: New value. </br><i>toReplace</i>: List of old values|
+| Replace(bool ignoreCase, string replacerString, params string[] toReplace)| Replaces multiple elements with one same element specified. Case can be considered or not. | <i>ignoreCase</i>: Ignore the case of the old value. </br><i>replacerString</i>: New value. </br><i>toReplace</i>: List of old values |
+| KeepOnlyNumbers() | Keeps all numbers, removing alphabetical letters and special characters. ||
+| KeepAllSpecialCharacters() | Keeps all special characters, removing alphabetical letters and numbers. ||
+| KeepOnlyAlphabeticalLetters() | Keeps all alphabetical letters, removing special characters and numbers. ||
 
 More methods will be added soon!
 
