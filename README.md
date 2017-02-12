@@ -1,7 +1,11 @@
 # String.Extensions
 <h2>These library helps you with String manipulation, avoiding repetitive syntax and regex use.</h2>
 
-To download String.Extensions, in the Nuget Package Manager, search for "String.Extensions".
+To download String.Extensions, using the Package Manager Console, type:
+
+Install-Package String.Extensions
+
+Or using the Nuget Package Manager, search for "String.Extensions".
 
 ![Alt text](/String.Extensions/img/nuget_download.png?raw=true "Nuget Package")
 
