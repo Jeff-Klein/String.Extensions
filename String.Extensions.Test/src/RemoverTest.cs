@@ -51,5 +51,15 @@ namespace UnitTestProject1
             Assert.AreEqual(expectedValue, stringTested);
         }
 
+        [TestMethod]
+        public void RemoveAllTextTest()
+        {
+            const string expectedValue = "4/-1_()";
+
+            var stringTested = "4/PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS-1_()";
+            stringTested = stringTested.RemoveAllText();
+
+            Assert.AreEqual(expectedValue, stringTested);
+        }
     }
 }

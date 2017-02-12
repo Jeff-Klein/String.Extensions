@@ -53,6 +53,7 @@
     <Compile Include="src\KeeperTest.cs" />
     <Compile Include="src\RemoverTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\ReplacerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\String.Extensions\String.Extensions.csproj">

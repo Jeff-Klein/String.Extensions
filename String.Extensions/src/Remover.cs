@@ -38,14 +38,19 @@ namespace String.Extensions
             return value;
         }
 
-        public static string RemoveAllNumbers(this string value)
+        public static string RemoveAllNumbers(this string originalString)
         {
-            return Regex.Replace(value, @"[\d-]", string.Empty);
+            return Regex.Replace(originalString, @"[\d-]", string.Empty);
         }
 
-        public static string RemoveAllSpecialCharacters(this string value)
+        public static string RemoveAllSpecialCharacters(this string originalString)
         {
-            return Regex.Replace(value, "[^0-9A-Za-z]+", string.Empty);
+            return Regex.Replace(originalString, "[^0-9A-Za-z]+", string.Empty);
+        }
+
+        public static string RemoveAllText(this string originalString)
+        {
+            return Regex.Replace(originalString, "[A-Za-z]", string.Empty);
         }
     }
 }
