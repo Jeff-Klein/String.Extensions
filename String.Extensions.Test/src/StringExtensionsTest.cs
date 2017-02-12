@@ -28,5 +28,6 @@ namespace UnitTestProject1
 
             Assert.AreEqual(expectedValue, stringTested);
         }
+
     }
 }

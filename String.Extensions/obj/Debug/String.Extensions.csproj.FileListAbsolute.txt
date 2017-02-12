@@ -2,3 +2,4 @@ C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\String
 C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\String.Extensions\bin\Debug\String.Extensions.pdb
 C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\String.Extensions\obj\Debug\String.Extensions.dll
 C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\String.Extensions\obj\Debug\String.Extensions.pdb
+C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\String.Extensions\obj\Debug\String.Extensions.csprojResolveAssemblyReference.cache
