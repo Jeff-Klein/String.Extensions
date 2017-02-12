@@ -1,0 +1,9 @@
+C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\UnitTestProject1\bin\Debug\String.Extensions.dll
+C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\UnitTestProject1\bin\Debug\String.Extensions.pdb
+C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\UnitTestProject1\obj\Debug\String.Extensions.Test.csprojResolveAssemblyReference.cache
+C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
