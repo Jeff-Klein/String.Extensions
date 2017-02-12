@@ -10,7 +10,7 @@ namespace String.Extensions
     public static class Replacer
     {
         /// <summary>
-        /// Replaces multiples elements with one same element specified. Case will be considered.
+        /// Replaces multiple elements with one same element specified. Case will be considered.
         /// </summary>
         /// <param name="replacerString">New value</param>
         /// <param name="toReplace">List of old values</param>
@@ -20,7 +20,7 @@ namespace String.Extensions
         }
 
         /// <summary>
-        /// Replaces multiples elements with one same element specified. Case can be considered or not.
+        /// Replaces multiple elements with one same element specified. Case can be considered or not.
         /// </summary>
         /// <param name="ignoreCase">Ignore the case of the old value.</param>
         /// <param name="replacerString">New value</param>

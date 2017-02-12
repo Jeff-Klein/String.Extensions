@@ -19,7 +19,7 @@ namespace String.Extensions
         }
 
         /// <summary>
-        /// Replaces multiples elements with one same element specified. Case will be considered.
+        /// Replaces multiple elements with one same element specified. Case will be considered.
         /// </summary>
         /// <param name="ignoreCase">Ignore the case of the value to be removed.</param>
         /// <param name="toRemove">List of values to be removed.</param>
