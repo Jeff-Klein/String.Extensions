@@ -38,6 +38,9 @@ namespace String.Extensions
             return value;
         }
 
-        
+        public static string RemoveAllNumbers(this string value)
+        {
+            return Regex.Replace(value, @"[\d-]", string.Empty);
+        }
     }
 }

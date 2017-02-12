@@ -8,7 +8,7 @@ namespace UnitTestProject1
     public class RemoverTest
     {
         [TestMethod]
-        public void TestLowerCase()
+        public void RemoveStringConsiderCase()
         {
             const string expectedValue = "pneumnultramicrcpicilicvlcancnii";
 
@@ -19,7 +19,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void TestUpperCase()
+        public void RemoveStringIgnoreCaseTest()
         {
             const string expectedValue = "PNEUMNULTRAMICRCPICILICVLCANCNII";
 
@@ -29,7 +29,16 @@ namespace UnitTestProject1
             Assert.AreEqual(expectedValue, stringTested);
         }
 
-        
+        [TestMethod]
+        public void RemoveAllNumbersTest()
+        {
+            const string expectedValue = "February th, ";
+
+            var stringTested = "February 2th, 1989";
+            stringTested = stringTested.RemoveAllNumbers();
+
+            Assert.AreEqual(expectedValue, stringTested);
+        }
 
     }
 }
