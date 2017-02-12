@@ -10,7 +10,15 @@ Or using the Nuget Package Manager, search for "String.Extensions".
 
 ![Alt text](/String.Extensions/img/nuget_download.png?raw=true "Nuget Package")
 
-Current method avaliable is an overload to <i>String.Remove()</i>. 
+Current methods avaliable are:
+
+| Method  | Description | Parameters |
+| ------------- | ------------- | ------------- |
+| String.Remove(params string[] toRemove)  | This method allows you to pass multiple Strings to be removed  | <i>toRemove</i>: List of values to be removed. |
+| String.Remove(bool ignoreCase, params string[] toRemove) | Replaces multiple elements with one same element specified. Case will be considered.  | <i>ignoreCase: Ignore the case of the value to be removed. </i> <i>toRemove</i>: List of values to be removed. |
+
+String.Remove:
+
 This method allows you to pass an array of Strings to be removed.
 
 ![Alt text](/String.Extensions/img/overload1.png?raw=true "First Overload")
