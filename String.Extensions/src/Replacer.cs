@@ -9,11 +9,22 @@ namespace String.Extensions
 {
     public static class Replacer
     {
+        /// <summary>
+        /// Replaces multiples elements with one same element specified. Case will be considered.
+        /// </summary>
+        /// <param name="replacerString">New value</param>
+        /// <param name="toReplace">List of old values</param>
         public static string Replace(this string str, string replacerString, params string[] toReplace)
         {
             return Replace(str, true, replacerString, toReplace);
         }
 
+        /// <summary>
+        /// Replaces multiples elements with one same element specified. Case can be considered or not.
+        /// </summary>
+        /// <param name="ignoreCase">Ignore the case of the old value.</param>
+        /// <param name="replacerString">New value</param>
+        /// <param name="toReplace">List of old values</param>
         public static string Replace(this string str, bool ignoreCase, string replacerString, params string[] toReplace)
         {
             if (ignoreCase)

@@ -52,12 +52,12 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void RemoveAllTextTest()
+        public void RemoveAllAlphabeticalLettersTest()
         {
             const string expectedValue = "4/-1_()";
 
             var stringTested = "4/PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS-1_()";
-            stringTested = stringTested.RemoveAllText();
+            stringTested = stringTested.RemoveAllAlphabeticalLetters();
 
             Assert.AreEqual(expectedValue, stringTested);
         }

@@ -9,11 +9,20 @@ namespace String.Extensions
 {
     public static class Remover
     {
+        /// <summary>
+        /// Removes multiple elements.
+        /// </summary>
+        /// <param name="toRemove">List of values to be removed.</param>
         public static string Remove(this string str, params string[] toRemove)
         {
             return RemoveStringConsiderCase(str, toRemove);
         }
 
+        /// <summary>
+        /// Replaces multiples elements with one same element specified. Case will be considered.
+        /// </summary>
+        /// <param name="ignoreCase">Ignore the case of the value to be removed.</param>
+        /// <param name="toRemove">List of values to be removed.</param>
         public static string Remove(this string str, bool ignoreCase, params string[] toRemove)
         {
             if (ignoreCase)
@@ -38,17 +47,26 @@ namespace String.Extensions
             return value;
         }
 
+        /// <summary>
+        /// Removes all numbers, keeping alphabetical letters and special characters.
+        /// </summary>
         public static string RemoveAllNumbers(this string originalString)
         {
             return Regex.Replace(originalString, @"[\d-]", string.Empty);
         }
 
+        /// <summary>
+        /// Removes all special characters, keeping alphabetical letters and numbers.
+        /// </summary>
         public static string RemoveAllSpecialCharacters(this string originalString)
         {
             return Regex.Replace(originalString, "[^0-9A-Za-z]+", string.Empty);
         }
 
-        public static string RemoveAllText(this string originalString)
+        /// <summary>
+        /// Removes all alphabetical letters, keeping special characters and numbers.
+        /// </summary>
+        public static string RemoveAllAlphabeticalLetters(this string originalString)
         {
             return Regex.Replace(originalString, "[A-Za-z]", string.Empty);
         }
