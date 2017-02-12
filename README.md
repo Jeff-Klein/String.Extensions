@@ -3,16 +3,16 @@
 
 To download String.Extensions, in the Nuget Package Manager, search for "String.Extensions".
 
-![Alt text](/img/nuget_download.png?raw=true "Nuget Package")
+![Alt text](/String.Extensions/img/nuget_download.png?raw=true "Nuget Package")
 
 Current method avaliable is an overload to <i>String.Remove()</i>. 
 This method allows you to pass an array of Strings to be removed.
 
-![Alt text](/img/overload1.png?raw=true "First Overload")
+![Alt text](/String.Extensions/img/overload1.png?raw=true "First Overload")
 
 You can also pass a boolean value to rather ignore case or not. If you don't pass this parameter, case will be considered by default.
 
-![Alt text](/img/overload2.png?raw=true "Second Overload")
+![Alt text](/String.Extensions/img/overload2.png?raw=true "Second Overload")
 
 More methods will be added soon!
 </br>
