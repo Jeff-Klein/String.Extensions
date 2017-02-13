@@ -1,6 +1,6 @@
 
 # String.Extensions
-<h2>These library helps you with String manipulation, avoiding repetitive syntax and regex use. All methods extend from default String type.</h2>
+<h2>This library helps you with String manipulation, avoiding repetitive syntax and regex use. All methods extend from default String type.</h2>
 
 To download String.Extensions, using the Package Manager Console, type:
 
