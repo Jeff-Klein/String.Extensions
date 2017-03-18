@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>String.Extensions</id>
-    <version>1.0.0.0</version>
+    <version>1.0.1</version>
     <title>String.Extensions</title>
     <authors>Jeferson Klein</authors>
     <owners>Jeferson Klein</owners>
@@ -11,8 +11,8 @@
     <iconUrl>http://robertmjordan.com/Content/theme/img/technologies/c-sharp-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Provides custom methods to C# String type</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
-    <copyright>Copyright 2017</copyright>
+    <releaseNotes>New methods</releaseNotes>
+    <copyright>String.Extensions Copyright 2017</copyright>
     <tags>C# String</tags>
   </metadata>
 </package>
