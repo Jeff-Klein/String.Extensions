@@ -6,3 +6,12 @@ C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\String
 C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\String.Extensions.Test\obj\Debug\String.Extensions.Test.csprojResolveAssemblyReference.cache
 C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\String.Extensions.Test\obj\Debug\String.Extensions.Test.dll
 C:\Users\Jeferson\Documents\Visual Studio 2015\Projects\String.Extensions\String.Extensions.Test\obj\Debug\String.Extensions.Test.pdb
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\bin\Debug\String.Extensions.Test.dll
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\bin\Debug\String.Extensions.Test.pdb
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\bin\Debug\String.Extensions.dll
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\bin\Debug\String.Extensions.pdb
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\obj\Debug\String.Extensions.Test.csprojResolveAssemblyReference.cache
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\obj\Debug\String.Extensions.Test.csproj.CoreCompileInputs.cache
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\obj\Debug\String.Extensions.Test.dll
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\obj\Debug\String.Extensions.Test.pdb
