@@ -1,0 +1,9 @@
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\bin\Release\netstandard2.0\String.Extensions.deps.json
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\bin\Release\netstandard2.0\String.Extensions.dll
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\bin\Release\netstandard2.0\String.Extensions.pdb
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\obj\Release\netstandard2.0\String.Extensions.csprojResolveAssemblyReference.cache
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\obj\Release\netstandard2.0\String.Extensions.csproj.CoreCompileInputs.cache
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\obj\Release\netstandard2.0\String.Extensions.AssemblyInfoInputs.cache
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\obj\Release\netstandard2.0\String.Extensions.AssemblyInfo.cs
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\obj\Release\netstandard2.0\String.Extensions.dll
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\obj\Release\netstandard2.0\String.Extensions.pdb

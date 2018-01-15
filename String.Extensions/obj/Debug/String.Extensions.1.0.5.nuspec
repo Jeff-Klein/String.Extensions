@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>String.Extensions</id>
+    <version>1.0.5</version>
+    <title>String.Extensions</title>
+    <authors>String.Extensions</authors>
+    <owners>String.Extensions</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <releaseNotes>Support to .NET Standard 2.0</releaseNotes>
+    <copyright>Copyright ©  2018</copyright>
+    <tags>NETSTANDARD</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\bin\Debug\netstandard2.0\String.Extensions.dll" target="lib\netstandard2.0\String.Extensions.dll" />
+  </files>
+</package>
