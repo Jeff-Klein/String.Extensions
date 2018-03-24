@@ -14,8 +14,8 @@ Current methods avaliable are:
 
 | Method  | Description | Parameters |
 | ------------- | ------------- | ------------- |
-| String.Remove(params string[] toRemove)  | This method allows you to pass multiple Strings to be removed  | <i>toRemove</i>: List of values to be removed. |
-| String.Remove(bool ignoreCase, params string[] toRemove) | Replaces multiple elements with one same element specified. Case will be considered.  | <i>ignoreCase</i>: Ignore the case of the value to be removed. </br><i>toRemove</i>: List of values to be removed. |
+| Remove(params string[] toRemove)  | This method allows you to pass multiple Strings to be removed  | <i>toRemove</i>: List of values to be removed. |
+| Remove(bool ignoreCase, params string[] toRemove) | Replaces multiple elements with one same element specified. Case will be considered.  | <i>ignoreCase</i>: Ignore the case of the value to be removed. </br><i>toRemove</i>: List of values to be removed. |
 | RemoveAllNumbers() | Removes all numbers, keeping alphabetical letters and special characters. ||
 | RemoveAllSpecialCharacters() | Removes all special characters, keeping alphabetical letters and numbers. ||
 | RemoveAllAlphabeticalLetters() | Removes all alphabetical letters, keeping special characters and numbers. ||
