@@ -8,9 +8,10 @@ C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\bin\Debug\ne
 C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\bin\Debug\netcoreapp2.0\String.Extensions.Test.pdb
 C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\bin\Debug\netcoreapp2.0\String.Extensions.dll
 C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\bin\Debug\netcoreapp2.0\String.Extensions.pdb
-C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\obj\Debug\netcoreapp2.0\String.Extensions.Test.csprojResolveAssemblyReference.cache
 C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\obj\Debug\netcoreapp2.0\String.Extensions.Test.csproj.CoreCompileInputs.cache
 C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\obj\Debug\netcoreapp2.0\String.Extensions.Test.AssemblyInfoInputs.cache
 C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\obj\Debug\netcoreapp2.0\String.Extensions.Test.AssemblyInfo.cs
 C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\obj\Debug\netcoreapp2.0\String.Extensions.Test.dll
 C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\obj\Debug\netcoreapp2.0\String.Extensions.Test.pdb
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\obj\Debug\netcoreapp2.0\String.Extensions.Test.csprojAssemblyReference.cache
+C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions.Test\obj\Debug\netcoreapp2.0\String.Extensions.Test.csproj.CopyComplete

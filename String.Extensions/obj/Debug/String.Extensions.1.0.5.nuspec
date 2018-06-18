@@ -12,10 +12,10 @@
     <copyright>Copyright ©  2018</copyright>
     <tags>NETSTANDARD</tags>
     <dependencies>
-      <group targetFramework=".NETStandard2.0" />
+      <group targetFramework=".NETCoreApp2.1" />
     </dependencies>
   </metadata>
   <files>
-    <file src="C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\bin\Debug\netstandard2.0\String.Extensions.dll" target="lib\netstandard2.0\String.Extensions.dll" />
+    <file src="C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\bin\Debug\netcoreapp2.1\String.Extensions.dll" target="lib\netcoreapp2.1\String.Extensions.dll" />
   </files>
 </package>
