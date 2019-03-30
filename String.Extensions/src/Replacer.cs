@@ -1,50 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace String.Extensions
 {
     public static class Replacer
     {
         /// <summary>
-        /// Replaces multiple elements with one same element specified. Case will be considered.
+        /// Replaces multiple strings with the specified string.
         /// </summary>
-        /// <param name="replacerString">New value</param>
-        /// <param name="toReplace">List of old values</param>
-        public static string Replace(this string str, string replacerString, params string[] toReplace)
-        {
-            return Replace(str, true, replacerString, toReplace);
-        }
-
-        /// <summary>
-        /// Replaces multiple elements with one same element specified. Case can be considered or not.
-        /// </summary>
-        /// <param name="ignoreCase">Ignore the case of the old value.</param>
-        /// <param name="replacerString">New value</param>
-        /// <param name="toReplace">List of old values</param>
-        public static string Replace(this string str, bool ignoreCase, string replacerString, params string[] toReplace)
+        /// <param name="ignoreCase">Whether the replacement should be case sensetive or not.</param>
+        /// <param name="newString">The string to replace all occurances of oldStrings</param>
+        /// <param name="oldStrings">Array of strings to be replaced.</param>
+        public static string Replace(this string str, bool ignoreCase, string newString, string[] oldStrings)
         {
             if (ignoreCase)
-                return ReplaceStringIgnoreCase(str, replacerString, toReplace);
+                return ReplaceStringIgnoreCase(str, newString, oldStrings);
             else
-                return ReplaceStringConsiderCase(str, replacerString, toReplace);
+                return ReplaceStringConsiderCase(str, newString, oldStrings);
         }
 
-        private static string ReplaceStringConsiderCase(this string value, string replacerString, string[] toReplace)
+        private static string ReplaceStringConsiderCase(this string value, string newString, string[] oldStrings)
         {
-            foreach (var item in toReplace)
-                value = value.Replace(item, replacerString);
+            foreach (var item in oldStrings)
+                value = Regex.Replace(value, Regex.Escape(item), newString, RegexOptions.None);
 
             return value;
         }
 
-        private static string ReplaceStringIgnoreCase(this string value, string replacerString, string[] toReplace)
+        private static string ReplaceStringIgnoreCase(this string value, string newString, string[] oldStrings)
         {
-            foreach (var item in toReplace)
-                value = Regex.Replace(value, Regex.Escape(item), replacerString, RegexOptions.IgnoreCase);
+            foreach (var item in oldStrings)
+                value = Regex.Replace(value, Regex.Escape(item), newString, RegexOptions.IgnoreCase);
 
             return value;
         }

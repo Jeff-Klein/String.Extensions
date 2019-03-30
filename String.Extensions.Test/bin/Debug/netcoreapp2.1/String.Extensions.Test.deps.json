@@ -1030,7 +1030,7 @@
     "Microsoft.CodeCoverage/1.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5KfX12XPfvBomjrZv9nCBfQ6lhZdroVxXvGnY6MqzG83bjqdq6SQ3xxJFdPgHv6oli83M9oNhZlynYehjmboUg==",
+      "sha512": "sha512-CmE+u43TKfA4dLkle2NwArwZ9qAvPDC/8jzTDGIxdAI6+5lU8JKm9wRF8YICz5RMtLe+jzMmPm0/r1Awo6zoiQ==",
       "path": "microsoft.codecoverage/1.0.3",
       "hashPath": "microsoft.codecoverage.1.0.3.nupkg.sha512"
     },
@@ -1058,21 +1058,21 @@
     "Microsoft.NET.Test.Sdk/15.7.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2qtmE+a+Zu847Zke4qjQaekLQg+ktoT88r2b+bW4Ev88bhm6EhHI36dy3qyXiCq0bTcaa2pF0YaVRtexL/YAkA==",
+      "sha512": "sha512-hYWFRIGc+NdKfdufKK1LjL4tAW9xFors6kUA7QV1MZ2Yp7QMXn+bCbgUAcbhBvfszLlCPMZZZvRHDOnA4jkvCg==",
       "path": "microsoft.net.test.sdk/15.7.2",
       "hashPath": "microsoft.net.test.sdk.15.7.2.nupkg.sha512"
     },
     "Microsoft.TestPlatform.ObjectModel/15.7.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-W8ShtzLDlBiOYd+bGKuInpEHcL35rWlC+kTN/XT2BOi5pnBMW6xnBDseL/tIfZ4tjC+4ZMRcZxknT56Ygtc0pw==",
+      "sha512": "sha512-qyzTqdsePTTrOurmaolm8XJ00Z7XX1gsYzdvt31s9C8qYAcMS2qgsLqafyfzNwMVBXbUv2Fbs99r6JhNSdr7Ww==",
       "path": "microsoft.testplatform.objectmodel/15.7.2",
       "hashPath": "microsoft.testplatform.objectmodel.15.7.2.nupkg.sha512"
     },
     "Microsoft.TestPlatform.TestHost/15.7.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3O5FSif+/pCF2sybndiNBg5Q13RDckE6ZEv8RUDwku7iaIGOzAtrIImtc8D+UOJzTG+q+Gpe/fRw6cRFVhbjiw==",
+      "sha512": "sha512-m+PTrCAu3zkttTf48Hg2YU4lqwvzTfjjcmlZMU6KVonQUwtmMO/rNui10t5kAlCRz6FhCjN/JP/MuDrI+/SIQA==",
       "path": "microsoft.testplatform.testhost/15.7.2",
       "hashPath": "microsoft.testplatform.testhost.15.7.2.nupkg.sha512"
     },

@@ -16,6 +16,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="C:\Users\emc2\Source\Repos\String.Extensions\String.Extensions\bin\Debug\netcoreapp2.1\String.Extensions.dll" target="lib\netcoreapp2.1\String.Extensions.dll" />
+    <file src="J:\Users\Administrator\Source\Repos\String.Extensions\String.Extensions\bin\Debug\netcoreapp2.1\String.Extensions.dll" target="lib\netcoreapp2.1\String.Extensions.dll" />
   </files>
 </package>

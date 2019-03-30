@@ -8,23 +8,23 @@ namespace String.Extensions.Test.src
         [TestMethod]
         public void ReplaceStringConsiderCase()
         {
-            const string expectedValue = "4/PNEUMXNXULTRAMXCRXXCXPXCXXLXCXVXLCANXCXNXXXXX-1_()";
+            const string testString = "THIS not this, THAT not that";
+            const string expectedValue = "XXXX not this, THAT not XXXX";
 
-            var stringTested = "4/PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS-1_()";
-            stringTested = stringTested.Replace(false, "X", "O", "S", "I");
+            string result = testString.Replace(false, "XXXX", new[] { "THIS", "that" });
 
-            Assert.AreEqual(expectedValue, stringTested);
+            Assert.AreEqual(expectedValue, result);
         }
 
         [TestMethod]
         public void ReplaceStringIgnoreCase()
         {
-            const string expectedValue = "4/PNEUMxNxULTRAMxCRxxCxPxCxxLxCxVxLCANxCxNxxxxx-1_()";
+            const string testString = "THIS not this, THAT not that";
+            const string expectedValue = "XXXX not XXXX, XXXX not XXXX";
 
-            var stringTested = "4/PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS-1_()";
-            stringTested = stringTested.Replace("x", "o", "s", "i");
+            string result = testString.Replace(false, "XXXX", new[] { "THIS", "that" });
 
-            Assert.AreEqual(expectedValue, stringTested);
+            Assert.AreEqual(expectedValue, result);
         }
     }
 }
