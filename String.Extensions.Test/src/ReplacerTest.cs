@@ -70,5 +70,27 @@ namespace String.Extensions.Test.src
 
             Assert.AreEqual(expectedValue, result);
         }
+
+        [TestMethod]
+        public void Substring_Include()
+        {
+            const string testString = "This is a test string";
+            const string expectedValue = "is a test string";
+
+            string result = testString.Substring("is", true);
+
+            Assert.AreEqual(expectedValue, result);
+        }
+
+        [TestMethod]
+        public void Substring_Exclude()
+        {
+            const string testString = "This is a test string";
+            const string expectedValue = " a test string";
+
+            string result = testString.Substring("is", false);
+
+            Assert.AreEqual(expectedValue, result);
+        }
     }
 }
