@@ -34,5 +34,18 @@ namespace String.Extensions
 
             return str.Substring(startStringIndex);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="startString"></param>
+        /// <param name="length"></param>
+        /// <param name="inclusive"></param>
+        /// <returns></returns>
+        public static string Substring(this string str, string startString, int length, bool inclusive)
+        {
+
+        }
     }
 }

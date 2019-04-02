@@ -8,10 +8,10 @@ namespace String.Extensions.Test.src
         [TestMethod]
         public void Substring_IncludeStart_ExcludeEnd()
         {
-            const string testString = "This is a test string";
-            const string expectedValue = "is a test ";
+            const string testString = "Start HERE end THERE.";
+            const string expectedValue = "HERE end ";
 
-            string result = testString.Substring("is", true, "string", false);
+            string result = testString.Substring("here", true, "there", false);
 
             Assert.AreEqual(expectedValue, result);
         }
@@ -19,7 +19,7 @@ namespace String.Extensions.Test.src
         [TestMethod]
         public void Substring_IncludeStart_IncludeEnd()
         {
-            const string testString = "This is a test string";
+            const string testString = "Start HERE end THERE.";
             const string expectedValue = "is a test";
 
             string result = testString.Substring("is", true, "test", true);
@@ -30,7 +30,7 @@ namespace String.Extensions.Test.src
         [TestMethod]
         public void Substring_ExcludeStart_ExcludeEnd()
         {
-            const string testString = "This is a test string";
+            const string testString = "Start HERE end THERE.";
             const string expectedValue = " a test ";
 
             string result = testString.Substring("is", false, "string", false);
@@ -41,7 +41,7 @@ namespace String.Extensions.Test.src
         [TestMethod]
         public void Substring_ExcludeStart_IncludeEnd()
         {
-            const string testString = "This is a test string";
+            const string testString = "Start HERE end THERE.";
             const string expectedValue = " a test string";
 
             string result = testString.Substring("is", false, "string", true);
@@ -52,7 +52,7 @@ namespace String.Extensions.Test.src
         [TestMethod]
         public void Substring_Include()
         {
-            const string testString = "This is a test string";
+            const string testString = "Start HERE end THERE.";
             const string expectedValue = "is a test string";
 
             string result = testString.Substring("is", true);
@@ -63,10 +63,10 @@ namespace String.Extensions.Test.src
         [TestMethod]
         public void Substring_Exclude()
         {
-            const string testString = "This is a test string";
-            const string expectedValue = " a test string";
+            const string testString = "Start HERE end THERE.";
+            const string expectedValue = " test string";
 
-            string result = testString.Substring("is", false);
+            string result = testString.Substring("is a", false);
 
             Assert.AreEqual(expectedValue, result);
         }
