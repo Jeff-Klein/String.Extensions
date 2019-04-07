@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using String.Extensions.src;
 
 namespace String.Extensions.Test.src
 {
@@ -6,45 +7,45 @@ namespace String.Extensions.Test.src
     public class SelectorTest
     {
         [TestMethod]
-        public void Substring_IncludeStart_ExcludeEnd()
+        public void Substring_IncludeStart()
         {
             const string testString = "Start HERE end THERE.";
             const string expectedValue = "HERE end ";
 
-            string result = testString.Substring("here", true, "there", false);
+            string result = testString.Substring("HERE", "THERE", StringInclusionOptions.IncludeStart);
 
             Assert.AreEqual(expectedValue, result);
         }
 
         [TestMethod]
-        public void Substring_IncludeStart_IncludeEnd()
+        public void Substring_IncludeBoth()
         {
             const string testString = "Start HERE end THERE.";
-            const string expectedValue = "is a test";
+            const string expectedValue = "HERE end THERE";
 
-            string result = testString.Substring("is", true, "test", true);
+            string result = testString.Substring("HERE", "THERE", StringInclusionOptions.IncludeBoth);
 
             Assert.AreEqual(expectedValue, result);
         }
 
         [TestMethod]
-        public void Substring_ExcludeStart_ExcludeEnd()
+        public void Substring_IncludeNone()
         {
             const string testString = "Start HERE end THERE.";
-            const string expectedValue = " a test ";
+            const string expectedValue = " end ";
 
-            string result = testString.Substring("is", false, "string", false);
+            string result = testString.Substring("HERE", "THERE", StringInclusionOptions.IncludeNone);
 
             Assert.AreEqual(expectedValue, result);
         }
 
         [TestMethod]
-        public void Substring_ExcludeStart_IncludeEnd()
+        public void Substring_IncludeEnd()
         {
             const string testString = "Start HERE end THERE.";
-            const string expectedValue = " a test string";
+            const string expectedValue = " end THERE";
 
-            string result = testString.Substring("is", false, "string", true);
+            string result = testString.Substring("HERE", "THERE", StringInclusionOptions.IncludeEnd);
 
             Assert.AreEqual(expectedValue, result);
         }

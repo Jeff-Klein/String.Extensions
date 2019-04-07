@@ -1,4 +1,5 @@
-﻿using System;
+﻿using String.Extensions.src;
+using System;
 
 namespace String.Extensions
 {
@@ -13,16 +14,36 @@ namespace String.Extensions
         /// <param name="endString">The string which marks the end of the substring.</param>
         /// <param name="includeEndString">A boolean indicating whether the substring should include the given endString.</param>
         /// <returns>A string representing the part of the original string, located between the startString and endString.</returns>
-        public static string Substring(this string str, string startString, bool includeStartString, string endString, bool includeEndString)
+        public static string Substring(this string str, string startString, string endString, StringInclusionOptions stringInclusionOptions)
         {
-            int startStringIndex = str.IndexOf(startString) + startString.Length * Convert.ToInt32(!includeStartString);
-            int endStringIndex = str.IndexOf(endString) + endString.Length * Convert.ToInt32(includeEndString);
+            int startStringIndex = 0;
+            int endStringIndex = 0;
+
+            switch (stringInclusionOptions)
+            {
+                case StringInclusionOptions.IncludeNone:
+                    startStringIndex = str.IndexOf(startString) + startString.Length;
+                    endStringIndex = str.IndexOf(endString);
+                    break;
+                case StringInclusionOptions.IncludeStart:
+                    startStringIndex = str.IndexOf(startString);
+                    endStringIndex = str.IndexOf(endString);
+                    break;
+                case StringInclusionOptions.IncludeEnd:
+                    startStringIndex = str.IndexOf(startString);
+                    endStringIndex = str.IndexOf(endString) + endString.Length;
+                    break;
+                case StringInclusionOptions.IncludeBoth:
+                    startStringIndex = str.IndexOf(startString);
+                    endStringIndex = str.IndexOf(endString) + endString.Length;
+                    break;
+            }
 
             return str.Substring(startStringIndex, endStringIndex);
         }
 
         /// <summary>
-        /// Retrieves the substring starting from a given string to the end of this instance.
+        /// Retrieves the substring starting from the given string to the end of this instance.
         /// </summary>
         /// <param name="str">The instance from which to extract a substring.</param>
         /// <param name="startString">The string which marks the start of the substring.</param>
@@ -45,7 +66,7 @@ namespace String.Extensions
         /// <returns></returns>
         public static string Substring(this string str, string startString, int length, bool inclusive)
         {
-
+            return "";
         }
     }
 }

@@ -42,9 +42,9 @@ namespace UnitTestProject1
         [TestMethod]
         public void RemoveAllSpecialCharactersTest()
         {
-            const string expectedValue = "4PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS1";
+            const string expectedValue = "711worksweekendsSatandSun";
 
-            var stringTested = "4/PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS-1_()";
+            var stringTested = "7-11 works_weekends (Sat and Sun)";
             stringTested = stringTested.RemoveAllSpecialCharacters();
 
             Assert.AreEqual(expectedValue, stringTested);
@@ -53,9 +53,9 @@ namespace UnitTestProject1
         [TestMethod]
         public void RemoveAllAlphabeticalLettersTest()
         {
-            const string expectedValue = "4/-1_()";
+            const string expectedValue = "__ - ()";
 
-            var stringTested = "4/PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS-1_()";
+            var stringTested = "_asd_ a-b (owo)";
             stringTested = stringTested.RemoveAllAlphabeticalLetters();
 
             Assert.AreEqual(expectedValue, stringTested);
