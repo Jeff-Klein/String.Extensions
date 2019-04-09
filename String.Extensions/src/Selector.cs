@@ -16,30 +16,31 @@ namespace String.Extensions
         /// <returns>A string representing the part of the original string, located between the startString and endString.</returns>
         public static string Substring(this string str, string startString, string endString, StringInclusionOptions stringInclusionOptions)
         {
-            int startStringIndex = 0;
-            int endStringIndex = 0;
+            int startStringIndex = str.IndexOf(startString);
+            int endStringIndex = str.IndexOf(endString);
+            int selectLength = str.Length - startStringIndex; // At minimum select the string from startStringIndex to end.
 
             switch (stringInclusionOptions)
             {
                 case StringInclusionOptions.IncludeNone:
                     startStringIndex = str.IndexOf(startString) + startString.Length;
-                    endStringIndex = str.IndexOf(endString);
+                    selectLength = startString.Length - (endStringIndex - endString.Length);
                     break;
                 case StringInclusionOptions.IncludeStart:
                     startStringIndex = str.IndexOf(startString);
-                    endStringIndex = str.IndexOf(endString);
+                    selectLength = endString.Length;
                     break;
                 case StringInclusionOptions.IncludeEnd:
-                    startStringIndex = str.IndexOf(startString);
-                    endStringIndex = str.IndexOf(endString) + endString.Length;
+                    startStringIndex = str.IndexOf(startString) + startString.Length;
+                    selectLength = startString.Length;
                     break;
                 case StringInclusionOptions.IncludeBoth:
                     startStringIndex = str.IndexOf(startString);
-                    endStringIndex = str.IndexOf(endString) + endString.Length;
+                    selectLength -= endStringIndex - endString.Length;
                     break;
             }
 
-            return str.Substring(startStringIndex, endStringIndex);
+            return str.Substring(startStringIndex, selectLength);
         }
 
         /// <summary>
