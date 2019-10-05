@@ -3,16 +3,18 @@ using System;
 
 namespace String.Extensions
 {
+    /// <summary>
+    /// Contains methods that select substrings and charaters from strings.
+    /// </summary>
     public static class Selector
     {
         /// <summary>
-        /// Retrieves the substring located between two given strings from this instance.
+        /// Retrieves a substring, located between given start and end strings, from this instance.
         /// </summary>
         /// <param name="str">The instance from which to extract a substring.</param>
-        /// <param name="startString">The string which marks the start of the substring.</param>
-        /// <param name="includeStartString">A boolean indicating whether the substring should include the given startString.</param>
+        /// <param name="startString">The string which marks the start of the substring to be extracted.</param>
         /// <param name="endString">The string which marks the end of the substring.</param>
-        /// <param name="includeEndString">A boolean indicating whether the substring should include the given endString.</param>
+        /// <param name="stringInclusionOptions">A StringInclusionOptions enum, indicating whether startString and/or endString should be included in the result.</param>
         /// <returns>A string representing the part of the original string, located between the startString and endString.</returns>
         public static string Substring(this string str, string startString, string endString, StringInclusionOptions stringInclusionOptions)
         {
@@ -23,19 +25,17 @@ namespace String.Extensions
             switch (stringInclusionOptions)
             {
                 case StringInclusionOptions.IncludeNone:
-                    startStringIndex = str.IndexOf(startString) + startString.Length;
+                    startStringIndex += startString.Length;
                     selectLength = startString.Length - (endStringIndex - endString.Length);
                     break;
                 case StringInclusionOptions.IncludeStart:
-                    startStringIndex = str.IndexOf(startString);
                     selectLength = endString.Length;
                     break;
                 case StringInclusionOptions.IncludeEnd:
-                    startStringIndex = str.IndexOf(startString) + startString.Length;
+                    startStringIndex += startString.Length;
                     selectLength = startString.Length;
                     break;
-                case StringInclusionOptions.IncludeBoth:
-                    startStringIndex = str.IndexOf(startString);
+                case StringInclusionOptions.IncludeAll:
                     selectLength -= endStringIndex - endString.Length;
                     break;
             }

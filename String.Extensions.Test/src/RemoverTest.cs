@@ -1,64 +1,78 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 using String.Extensions;
 
 namespace UnitTestProject1
 {
-    [TestClass]
     public class RemoverTest
     {
-        [TestMethod]
-        public void RemoveStringConsiderCase()
+        [Theory]
+        [InlineData("", "")]
+        [InlineData("", "")]
+        [InlineData("", "")]
+        public void RemoveStringConsiderCase(string testString, string expected)
         {
             const string expectedValue = "pneumnultramicrcpicilicvlcancnii";
 
             var stringTested = "4/pneumonoultramicroscopicsilicovolcanoconiosis-1_()";
             stringTested = stringTested.Remove("(", ")", "1", "-", "/", "4", "o", "s", "_");
 
-            Assert.AreEqual(expectedValue, stringTested);
+            Assert.Equal(expectedValue, stringTested);
         }
 
-        [TestMethod]
-        public void RemoveStringIgnoreCaseTest()
+        [Theory]
+        [InlineData("", "")]
+        [InlineData("", "")]
+        [InlineData("", "")]
+        public void RemoveStringIgnoreCaseTest(string testString, string expected)
         {
             const string expectedValue = "PNEUMNULTRAMICRCPICILICVLCANCNII";
 
             var stringTested = "4/PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS-1_()";
             stringTested = stringTested.Remove(true, "(", ")", "1", "-", "/", "4", "o", "s", "_");
 
-            Assert.AreEqual(expectedValue, stringTested);
+            Assert.Equal(expectedValue, stringTested);
         }
 
-        [TestMethod]
-        public void RemoveAllNumbersTest()
+        [Theory]
+        [InlineData("", "")]
+        [InlineData("", "")]
+        [InlineData("", "")]
+        public void RemoveAllNumbersTest(string testString, string expected)
         {
             const string expectedValue = "February th, ";
 
             var stringTested = "February 2th, 1989";
             stringTested = stringTested.RemoveAllNumbers();
 
-            Assert.AreEqual(expectedValue, stringTested);
+            Assert.Equal(expectedValue, stringTested);
         }
 
-        [TestMethod]
-        public void RemoveAllSpecialCharactersTest()
+        [Theory]
+        [InlineData("", "")]
+        [InlineData("", "")]
+        [InlineData("", "")]
+        public void RemoveAllSpecialCharactersTest(string testString, string expected)
         {
             const string expectedValue = "711worksweekendsSatandSun";
 
             var stringTested = "7-11 works_weekends (Sat and Sun)";
             stringTested = stringTested.RemoveAllSpecialCharacters();
 
-            Assert.AreEqual(expectedValue, stringTested);
+            Assert.Equal(expectedValue, stringTested);
         }
 
-        [TestMethod]
-        public void RemoveAllAlphabeticalLettersTest()
+        [Theory]
+        [InlineData("", "")]
+        [InlineData("", "")]
+        [InlineData("", "")]
+        public void RemoveAllAlphabeticalLettersTest(string testString, string expected)
         {
             const string expectedValue = "__ - ()";
 
             var stringTested = "_asd_ a-b (owo)";
             stringTested = stringTested.RemoveAllAlphabeticalLetters();
 
-            Assert.AreEqual(expectedValue, stringTested);
+            Assert.Equal(expectedValue, stringTested);
         }
     }
 }

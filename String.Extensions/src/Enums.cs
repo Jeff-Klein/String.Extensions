@@ -5,6 +5,6 @@
         IncludeNone,
         IncludeStart,
         IncludeEnd,
-        IncludeBoth
+        IncludeAll
     }
 }
