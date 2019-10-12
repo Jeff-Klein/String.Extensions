@@ -5,29 +5,25 @@ namespace String.Extensions.Test.src
     public class ReplacerTest
     {
         [Theory]
-        [InlineData("", "")]
-        [InlineData("", "")]
-        [InlineData("", "")]
-        public void ReplaceStringConsiderCase(string testString, string expected)
+        [InlineData("t34ROgYYYY2p2TlJ4JYsa2yyyylJts0hLujF72", "t34ROgYYYY2p2TlJ4JYsa2XXXXlJts0hLujF72")]
+        [InlineData("SpyyyytLUHHxYYYYJnPltTikZZZZl8FuOOzzzzc091F2Yk", "SpXXXXtLUHHxYYYYJnPltTikXXXXl8FuOOzzzzc091F2Yk")]
+        [InlineData("svAZzZzEYqjq8YyYy0hVKuFRyyyyl2ry4eZZZZauLCe6V", "svAZzZzEYqjq8YyYy0hVKuFRXXXXl2ry4eXXXXauLCe6V")]
+        public void ReplaceString_Test_ConsiderCase(string testString, string expected)
         {
-            const string expectedValue = "XXXX not this, THAT not XXXX";
+            string actual = testString.Replace(false, "XXXX", new[] { "yyyy", "ZZZZ" });
 
-            string result = testString.Replace(false, "XXXX", new[] { "THIS", "that" });
-
-            Assert.Equal(expectedValue, result);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
-        [InlineData("", "")]
-        [InlineData("", "")]
-        [InlineData("", "")]
-        public void ReplaceStringIgnoreCase(string testString, string expected)
+        [InlineData("t34ROgYYYY2p2TlJ4JYsa2yyyylJts0hLujF72", "t34ROgXXXX2p2TlJ4JYsa2XXXXlJts0hLujF72")]
+        [InlineData("SpyyyytLUHHxYYYYJnPltTikZZZZl8FuOOzzzzc091F2Yk", "SpXXXXtLUHHxXXXXJnPltTikXXXXl8FuOOXXXXc091F2Yk")]
+        [InlineData("svAZzZzEYqjq8YyYy0hVKuFRyyyyl2ry4eZZZZauLCe6V", "svAXXXXEYqjq8XXXX0hVKuFRXXXXl2ry4eXXXXauLCe6V")]
+        public void ReplaceString_Test_IgnoreCase(string testString, string expected)
         {
-            const string expectedValue = "XXXX not XXXX, XXXX not XXXX";
+            string actual = testString.Replace(true, "XXXX", new[] { "ZZZZ", "yyyy" });
 
-            string result = testString.Replace(true, "XXXX", new[] { "THIS", "that" });
-
-            Assert.Equal(expectedValue, result);
+            Assert.Equal(expected, actual);
         }
     }
 }

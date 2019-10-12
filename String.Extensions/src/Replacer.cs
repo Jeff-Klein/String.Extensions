@@ -7,10 +7,10 @@ namespace String.Extensions
         /// <summary>
         /// Replaces multiple strings with the specified string.
         /// </summary>
-        /// <param name="ignoreCase">Whether the replacement should be case sensetive or not.</param>
-        /// <param name="newString">The string to replace all occurances of oldStrings</param>
+        /// <param name="ignoreCase">Whether the replacement should ignore case or not.</param>
+        /// <param name="newString">The string to replace all occurances of "oldStrings".</param>
         /// <param name="oldStrings">Array of strings to be replaced.</param>
-        /// <returns></returns>
+        /// <returns>A string with all instances of "oldStrings" replaced by "newString".</returns>
         public static string Replace(this string str, bool ignoreCase, string newString, string[] oldStrings)
         {
             if (ignoreCase)
