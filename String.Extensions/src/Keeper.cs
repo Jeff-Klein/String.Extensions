@@ -17,7 +17,7 @@ namespace String.Extensions
         /// <summary>
         /// Keeps all special characters, removing letters and numbers.
         /// </summary>
-        public static string KeepAllSpecialCharacters(this string originalString)
+        public static string KeepOnlySpecialCharacters(this string originalString)
         {
             string specialCharacters = string.Empty;
 
