@@ -18,6 +18,10 @@ namespace String.Extensions
         /// <returns>A string representing the part of the original string, located between the startString and endString.</returns>
         public static string Substring(this string str, string startString, string endString, StringInclusionOptions stringInclusionOptions)
         {
+            // These are precaution calls, meant to throw an "ArgumentOutOfRangeException" exception if needed.
+            str.Substring(str.IndexOf(startString));
+            str.Substring(str.IndexOf(endString));
+
             int startStringIndex = str.IndexOf(startString);
             int endStringIndex = str.IndexOf(endString);
 
@@ -52,6 +56,9 @@ namespace String.Extensions
         /// <returns>A string representing the part of the original string, located from startString to the end of the original instance.</returns>
         public static string Substring(this string str, string startString, bool inclusive)
         {
+            // This is a precaution call, meant to throw an "ArgumentOutOfRangeException" exception if needed.
+            str.Substring(str.IndexOf(startString));
+
             int startStringIndex = str.IndexOf(startString) + startString.Length * Convert.ToInt32(!inclusive);
 
             return str.Substring(startStringIndex);
@@ -61,14 +68,22 @@ namespace String.Extensions
         /// Retrieves a substring from this instance. The substring starts at the first
         /// occurence of a specified string position and has a specified length.
         /// </summary>
-        /// <param name="str"></param>
-        /// <param name="startString"></param>
-        /// <param name="length"></param>
-        /// <param name="inclusive"></param>
-        /// <returns></returns>
+        /// <param name="str">The instance from which to extract a substring.</param>
+        /// <param name="startString">The string which marks the start of the substring.</param>
+        /// <param name="length">The number of characters to return.</param>
+        /// <param name="inclusive">A boolean indicating whether the substring should include the given startString.</param>
+        /// <returns>
+        /// A string that is equivalent to the substring of length "length" that begins at
+        /// the first instance of "startString" in this string instance
+        /// </returns>
         public static string Substring(this string str, string startString, int length, bool inclusive)
         {
-            return "";
+            // This is a precaution call, meant to throw an "ArgumentOutOfRangeException" exception if needed.
+            str.Substring(str.IndexOf(startString));
+
+            int startStringIndex = str.IndexOf(startString) + startString.Length * Convert.ToInt32(!inclusive);
+
+            return str.Substring(startStringIndex, length);
         }
     }
 }

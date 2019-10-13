@@ -1,5 +1,6 @@
 ﻿using Xunit;
 using String.Extensions.src;
+using System;
 
 namespace String.Extensions.Test.src
 {
@@ -69,6 +70,64 @@ namespace String.Extensions.Test.src
             string result = testString.Substring("start", false);
 
             Assert.Equal(expected, result);
+        }
+
+        [Theory]
+        [InlineData("His true character is starting to show through.", "starting to show through.")]
+        [InlineData("Export of the product will start soon.", "start soon.")]
+        [InlineData("I'm starting to lose my patience.", "starting to lose my patience.")]
+        public void Substring_LengthTEST_Inclusive(string testString, string expected)
+        {
+            string result = testString.Substring("start", true);
+
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
+        [InlineData("His true character is starting to show through.", "ing to show through.")]
+        [InlineData("Export of the product will start soon.", " soon.")]
+        [InlineData("I'm starting to lose my patience.", "ing to lose my patience.")]
+        public void Substring_LengthTEST_Exclusive(string testString, string expected)
+        {
+            string result = testString.Substring("start", false);
+
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Substring_TEST_ArgumentOutOfRangeException_MissingStart()
+        {
+            const string testString = "A whole lotta nothin'.";
+            Action action = () => testString.Substring("NotPresentInString", "nothin", StringInclusionOptions.IncludeAll);
+
+            Assert.Throws<ArgumentOutOfRangeException>(action);
+        }
+
+        [Fact]
+        public void Substring_TEST_ArgumentOutOfRangeException_MissingEnd()
+        {
+            const string testString = "A whole lotta nothin'.";
+            Action action = () => testString.Substring("whole", "NotPresentInString", StringInclusionOptions.IncludeAll);
+
+            Assert.Throws<ArgumentOutOfRangeException>(action);
+        }
+
+        [Fact]
+        public void Substring_TEST_ArgumentOutOfRangeException()
+        {
+            const string testString = "A whole lotta nothin'.";
+            Action action = () => testString.Substring("NotPresentInString", false);
+
+            Assert.Throws<ArgumentOutOfRangeException>(action);
+        }
+
+        [Fact]
+        public void Substring_Length_TEST_ArgumentOutOfRangeException()
+        {
+            const string testString = "A whole lotta nothin'.";
+            Action action = () => testString.Substring("NotPresentInString", 3, false);
+
+            Assert.Throws<ArgumentOutOfRangeException>(action);
         }
     }
 }
