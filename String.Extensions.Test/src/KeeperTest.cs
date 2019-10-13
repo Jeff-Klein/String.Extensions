@@ -1,46 +1,40 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Xunit;
 
 namespace String.Extensions.Test.src
 {
-    [TestClass]
     public class KeeperTest
     {
-        [TestMethod]
-        public void RemoveAllNumbersTest()
+        [Theory]
+        [InlineData("awd1dkb33aljfo39d109j1082jd", "133391091082")]
+        [InlineData("PTwXUV2zFdtYHtUMltxF", "2")]
+        [InlineData("0PhTjDt3prG0ixqqmFf5", "0305")]
+        public void KeepOnlyNumbers_Test(string testString, string expected)
         {
-            const string expectedValue = "21989";
+            string actual = testString.KeepOnlyNumbers();
 
-            var stringTested = "February 2th, 1989";
-            stringTested = stringTested.KeepOnlyNumbers();
-
-            Assert.AreEqual(expectedValue, stringTested);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
-        public void KeepAllSpecialCharactersTest()
+        [Theory]
+        [InlineData(@"FH3g=n*-!9ZaHL)k%uPQ", @"=*-!)%")]
+        [InlineData(@"*Uk%K+Re6&e!u9wV/)PC", @"*%+&!/)")]
+        [InlineData(@"YckU$QV%-1d*6MDRKnQq", @"$%-*")]
+        public void KeepOnlySpecialCharacters_Test(string testString, string expected)
         {
-            const string expectedValue = "/-_()";
+            string actual = testString.KeepOnlySpecialCharacters();
 
-            var stringTested = "4/PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS-1_()";
-            stringTested = stringTested.KeepAllSpecialCharacters();
-
-            Assert.AreEqual(expectedValue, stringTested);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
-        public void KeepOnlyAlphabeticalLettersTest()
+        [Theory]
+        [InlineData(@"6=XKjumEULTE54j%%W6g", @"XKjumEULTEjWg")]
+        [InlineData(@"bzKGOeQS)+59caKeE#f9", @"bzKGOeQScaKeEf")]
+        [InlineData(@"f(KRiWrbn5sNn8/JHatr", @"fKRiWrbnsNnJHatr")]
+        public void KeepOnlyLetters_Test(string testString, string expected)
         {
-            const string expectedValue = "PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS";
+            string actual = testString.KeepOnlyLetters();
 
-            var stringTested = "4/PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS-1_()";
-            stringTested = stringTested.KeepOnlyAlphabeticalLetters();
-
-            Assert.AreEqual(expectedValue, stringTested);
+            Assert.Equal(expected, actual);
         }
     }
 }
