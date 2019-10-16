@@ -1,30 +1,29 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace String.Extensions.Test.src
 {
-    [TestClass]
     public class ReplacerTest
     {
-        [TestMethod]
-        public void ReplaceStringConsiderCase()
+        [Theory]
+        [InlineData("t34ROgYYYY2p2TlJ4JYsa2yyyylJts0hLujF72", "t34ROgYYYY2p2TlJ4JYsa2XXXXlJts0hLujF72")]
+        [InlineData("SpyyyytLUHHxYYYYJnPltTikZZZZl8FuOOzzzzc091F2Yk", "SpXXXXtLUHHxYYYYJnPltTikXXXXl8FuOOzzzzc091F2Yk")]
+        [InlineData("svAZzZzEYqjq8YyYy0hVKuFRyyyyl2ry4eZZZZauLCe6V", "svAZzZzEYqjq8YyYy0hVKuFRXXXXl2ry4eXXXXauLCe6V")]
+        public void ReplaceString_Test_ConsiderCase(string testString, string expected)
         {
-            const string expectedValue = "4/PNEUMXNXULTRAMXCRXXCXPXCXXLXCXVXLCANXCXNXXXXX-1_()";
+            string actual = testString.Replace(false, "XXXX", new[] { "yyyy", "ZZZZ" });
 
-            var stringTested = "4/PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS-1_()";
-            stringTested = stringTested.Replace(false, "X", "O", "S", "I");
-
-            Assert.AreEqual(expectedValue, stringTested);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
-        public void ReplaceStringIgnoreCase()
+        [Theory]
+        [InlineData("t34ROgYYYY2p2TlJ4JYsa2yyyylJts0hLujF72", "t34ROgXXXX2p2TlJ4JYsa2XXXXlJts0hLujF72")]
+        [InlineData("SpyyyytLUHHxYYYYJnPltTikZZZZl8FuOOzzzzc091F2Yk", "SpXXXXtLUHHxXXXXJnPltTikXXXXl8FuOOXXXXc091F2Yk")]
+        [InlineData("svAZzZzEYqjq8YyYy0hVKuFRyyyyl2ry4eZZZZauLCe6V", "svAXXXXEYqjq8XXXX0hVKuFRXXXXl2ry4eXXXXauLCe6V")]
+        public void ReplaceString_Test_IgnoreCase(string testString, string expected)
         {
-            const string expectedValue = "4/PNEUMxNxULTRAMxCRxxCxPxCxxLxCxVxLCANxCxNxxxxx-1_()";
+            string actual = testString.Replace(true, "XXXX", new[] { "ZZZZ", "yyyy" });
 
-            var stringTested = "4/PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS-1_()";
-            stringTested = stringTested.Replace("x", "o", "s", "i");
-
-            Assert.AreEqual(expectedValue, stringTested);
+            Assert.Equal(expected, actual);
         }
     }
 }

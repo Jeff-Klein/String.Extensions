@@ -1,34 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace String.Extensions
 {
     public static class Remover
     {
         /// <summary>
-        /// Removes multiple elements.
+        /// Removes all instances of all of the given string array elements, case-insensitive.
         /// </summary>
-        /// <param name="toRemove">List of values to be removed.</param>
-        public static string Remove(this string str, params string[] toRemove)
+        /// <param name="toRemove">Array of values to be removed.</param>
+        public static string Remove(this string str, params string[] removeStrings)
         {
-            return RemoveStringConsiderCase(str, toRemove);
+            return RemoveStringConsiderCase(str, removeStrings);
         }
 
         /// <summary>
-        /// Replaces multiple elements with one same element specified. Case will be considered.
+        /// Removes all instances of all of the given string array elements. Case-sensitivity can be specified.
         /// </summary>
-        /// <param name="ignoreCase">Ignore the case of the value to be removed.</param>
-        /// <param name="toRemove">List of values to be removed.</param>
-        public static string Remove(this string str, bool ignoreCase, params string[] toRemove)
+        /// <param name="ignoreCase">Boolean value indicating if the case of the value to be removed should be ignored.</param>
+        /// <param name="removeStrings">Array of values to be removed.</param>
+        public static string Remove(this string str, bool ignoreCase, params string[] removeStrings)
         {
             if (ignoreCase)
-                return RemoveStringIgnoreCase(str, toRemove);
+                return RemoveStringIgnoreCase(str, removeStrings);
             else
-                return RemoveStringConsiderCase(str, toRemove);
+                return RemoveStringConsiderCase(str, removeStrings);
         }
 
         private static string RemoveStringConsiderCase(this string value, string[] toRemove)
@@ -48,25 +43,25 @@ namespace String.Extensions
         }
 
         /// <summary>
-        /// Removes all numbers, keeping alphabetical letters and special characters.
+        /// Removes all numbers, keeping letters and special characters.
         /// </summary>
-        public static string RemoveAllNumbers(this string originalString)
+        public static string RemoveNumbers(this string originalString)
         {
             return Regex.Replace(originalString, @"[\d-]", string.Empty);
         }
 
         /// <summary>
-        /// Removes all special characters, keeping alphabetical letters and numbers.
+        /// Removes all special characters, keeping letters and numbers.
         /// </summary>
-        public static string RemoveAllSpecialCharacters(this string originalString)
+        public static string RemoveSpecialCharacters(this string originalString)
         {
             return Regex.Replace(originalString, "[^0-9A-Za-z]+", string.Empty);
         }
 
         /// <summary>
-        /// Removes all alphabetical letters, keeping special characters and numbers.
+        /// Removes all letters, keeping special characters and numbers.
         /// </summary>
-        public static string RemoveAllAlphabeticalLetters(this string originalString)
+        public static string RemoveLetters(this string originalString)
         {
             return Regex.Replace(originalString, "[A-Za-z]", string.Empty);
         }
