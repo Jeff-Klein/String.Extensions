@@ -7,12 +7,12 @@
     <Copyright>Copyright ©  2019</Copyright>
 	<Title>String.Extensions</Title>
 	<Product>String.Extensions</Product>
-	<Version>1.1.4</Version>
+	<Version>1.1.0</Version>
 	<RepositoryUrl></RepositoryUrl>
-	<AssemblyVersion>1.1.4</AssemblyVersion>
+	<AssemblyVersion>1.1.0</AssemblyVersion>
 	<PackageReleaseNotes></PackageReleaseNotes>
 	<PackageTags>NETCORE, string, extension</PackageTags>
-	<FileVersion>1.1.4.0</FileVersion>
+	<FileVersion>1.1.0.0</FileVersion>
 	<Authors>Jeferson Klein</Authors>
 	<PackageId>String.Extensions</PackageId>
   </PropertyGroup>
