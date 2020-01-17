@@ -4,14 +4,17 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <Company>String.Extensions</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>Copyright ©  2018</Copyright>
+    <Copyright>Copyright ©  2019</Copyright>
 	<Title>String.Extensions</Title>
 	<Product>String.Extensions</Product>
-	<Version>1.0.5</Version>
+	<Version>1.1.0</Version>
 	<RepositoryUrl></RepositoryUrl>
-	<AssemblyVersion>1.0.5</AssemblyVersion>
-	<PackageReleaseNotes>Support to .NET Standard 2.0</PackageReleaseNotes>
-	<PackageTags>NETSTANDARD</PackageTags>
+	<AssemblyVersion>1.1.0</AssemblyVersion>
+	<PackageReleaseNotes></PackageReleaseNotes>
+	<PackageTags>NETCORE, string, extension</PackageTags>
+	<FileVersion>1.1.0.0</FileVersion>
+	<Authors>Jeferson Klein</Authors>
+	<PackageId>String.Extensions</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
